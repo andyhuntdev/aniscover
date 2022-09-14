@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, NavLink, Button, Box, Text, Input } from 'theme-ui';
+import { Flex, NavLink, Button, Box, Text, Link, Image } from 'theme-ui';
 import ColorSwitcher from './ColorSwitcher';
 import Searchbar from './Searchbar';
 
@@ -29,18 +29,24 @@ export default function Header() {
                         </NavLink>
                     </div>
                     <Box sx={{ display: ['none', 'none', 'block'] }}>
-                        <Searchbar/>
+                        <Searchbar />
                     </Box>
                 </Flex>
                 <Box sx={{ display: 'flex', placeItems: 'center' }}>
-                    <Button py={1} variant="outline" color="secondary" mr={2}>
-                        Github
-                    </Button>
+                    <Link
+                        href="https://github.com/andyhuntdev/aniscover"
+                        target="_blank"
+                        sx={{ textDecoration: 'none' }}
+                    >
+                        <Button py={1} variant="outline" color="secondary" mr={2}>
+                            Github
+                        </Button>
+                    </Link>
                     <ColorSwitcher />
                 </Box>
             </Flex>
             <Box sx={{ display: ['block', 'block', 'none'], p: 3, pb: 0 }}>
-                <Searchbar/>
+                <Searchbar />
             </Box>
         </>
     );
