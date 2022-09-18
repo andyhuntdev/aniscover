@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Aniscover
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center">
+<img src="https://ik.imagekit.io/8fhqrij68/aniscover/tr:w-400,f-auto/preview-1_UejYcApjE.png" alt="app-preview-1">
+<img src="https://ik.imagekit.io/8fhqrij68/aniscover/tr:w-400,f-auto/preview-2_i15mULTLm.png" alt="app-preview-2">
+<img src="https://ik.imagekit.io/8fhqrij68/aniscover/tr:w-400,f-auto/preview-3_5gwSTJDcj.png" alt="app-preview-3">
+<img src="https://ik.imagekit.io/8fhqrij68/aniscover/tr:w-400,f-auto/preview-4_Jfx3BXxK7Q.png" alt="app-preview-4">
+</div>
+<br/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+---
+This is just a web app based on data from <a href="https://myanimelist.net/" target="_blank">MyAnimeList.net</a> provided via <a href="https://jikan.moe/" target="_blank">Jikan REST API</a>. The main goal with this project for me as a developer was creating something fun and useful (at least I hope so). The app doesn't contain any information, that can't be found on MyAnimeList.net, but the general idea was to provide functional search tool and only general information about anime.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Features
+---
+- Discover upcoming, popular, airing, favorite, movie and OVA anime
+- Search Anime with suggests
+- Detailed info about each anime
+- Play anime trailer hovering top hero carousel or clicking on it in detail modal
+- Light and dark theme
 
-### `npm start`
+## Getting started
+---
+### Prerequisites
+- npm
+- nodejs
+### Installation
+1. Clone repo
+````
+git clone https://github.com/andyhuntdev/aniscover.git
+````
+2. Install packages
+`````
+npm i
+`````
+3. Runs the app in the development mode.
+Open http://localhost:3000 to view it in your browser.
+`````
+npm run start
+`````
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+---
+MIT
