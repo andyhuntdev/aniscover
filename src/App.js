@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'theme-ui';
-import { hackclub } from './themes';
+import { theme } from './themes';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Modal from './components/Modal';
@@ -12,6 +12,11 @@ export const AppContext = createContext({});
 
 function App() {
     const [animeId, setAnimeId] = useState(null);
+
+    const [airingLoad, setAiringLoad] = useState(false);
+    const [favLoad, setFavLoad] = useState(false);
+    const [movieLoad, setMovieLoad] = useState(false);
+    const [ovaLoad, setOvaLoad] = useState(false);
 
     useEffect(() => {
         window.onbeforeunload = function () {
@@ -34,7 +39,7 @@ function App() {
                 setAnimeId,
             }}
         >
-            <ThemeProvider theme={hackclub}>
+            <ThemeProvider theme={theme}>
                 {!!animeId && <Modal id={animeId} />}
                 <Box
                     sx={{
@@ -44,26 +49,47 @@ function App() {
                     <Header />
                     <Hero fetchUrl="https://api.jikan.moe/v4/top/anime?&filter=upcoming" />
                     <PosterCarousel
+                        loadCallBack={() => {
+                            setAiringLoad(true);
+                        }}
                         name="Popularity"
                         fetchUrl="https://api.jikan.moe/v4/top/anime?type=tv&filter=bypopularity"
                     />
-                    <PosterCarousel
-                        name="Airing"
-                        fetchUrl="https://api.jikan.moe/v4/top/anime?type=tv&filter=airing"
-                    />
-                    <PosterCarousel
-                        name="Favorite"
-                        fetchUrl="https://api.jikan.moe/v4/top/anime?type=tv&filter=favorite"
-                    />
+                    {airingLoad && (
+                        <PosterCarousel
+                            loadCallBack={() => {
+                                setFavLoad(true);
+                            }}
+                            name="Airing"
+                            fetchUrl="https://api.jikan.moe/v4/top/anime?type=tv&filter=airing"
+                        />
+                    )}
 
-                    <PosterCarousel
-                        name="Movie"
-                        fetchUrl="https://api.jikan.moe/v4/top/anime?type=movie&filter=favorite"
-                    />
-                    <PosterCarousel
-                        name="OVA"
-                        fetchUrl="https://api.jikan.moe/v4/top/anime?type=ova&filter=favorite"
-                    />
+                    {favLoad && (
+                        <PosterCarousel
+                            loadCallBack={() => {
+                                setMovieLoad(true);
+                            }}
+                            name="Favorite"
+                            fetchUrl="https://api.jikan.moe/v4/top/anime?type=tv&filter=favorite"
+                        />
+                    )}
+
+                    {movieLoad && (
+                        <PosterCarousel
+                            loadCallBack={() => {
+                                setOvaLoad(true);
+                            }}
+                            name="Movie"
+                            fetchUrl="https://api.jikan.moe/v4/top/anime?type=movie&filter=favorite"
+                        />
+                    )}
+                    {ovaLoad && (
+                        <PosterCarousel
+                            name="OVA"
+                            fetchUrl="https://api.jikan.moe/v4/top/anime?type=ova&filter=favorite"
+                        />
+                    )}
                 </Box>
             </ThemeProvider>
         </AppContext.Provider>
