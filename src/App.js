@@ -49,7 +49,7 @@ function App() {
                     <Header />
                     <Hero fetchUrl="https://api.jikan.moe/v4/top/anime?&filter=upcoming" />
                     <PosterCarousel
-                        loadCallBack={() => {
+                        loadCallback={() => {
                             setAiringLoad(true);
                         }}
                         name="Popularity"
@@ -57,7 +57,7 @@ function App() {
                     />
                     {airingLoad && (
                         <PosterCarousel
-                            loadCallBack={() => {
+                            loadCallback={() => {
                                 setFavLoad(true);
                             }}
                             name="Airing"
@@ -67,7 +67,7 @@ function App() {
 
                     {favLoad && (
                         <PosterCarousel
-                            loadCallBack={() => {
+                            loadCallback={() => {
                                 setMovieLoad(true);
                             }}
                             name="Favorite"
@@ -77,7 +77,7 @@ function App() {
 
                     {movieLoad && (
                         <PosterCarousel
-                            loadCallBack={() => {
+                            loadCallback={() => {
                                 setOvaLoad(true);
                             }}
                             name="Movie"
