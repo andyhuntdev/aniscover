@@ -8,12 +8,10 @@
 <br/>
 
 ## Introduction
----
 This is just a web app based on data from <a href="https://myanimelist.net/" target="_blank">MyAnimeList.net</a> provided via <a href="https://jikan.moe/" target="_blank">Jikan REST API</a>. The main goal with this project for me as a developer was creating something fun and useful (at least I hope so). The app doesn't contain any information, that can't be found on MyAnimeList.net, but the general idea was to provide functional search tool and only general information about anime.
 
 
 ## Features
----
 - Discover upcoming, popular, airing, favorite, movie and OVA anime
 - Search Anime with suggests
 - Detailed info about each anime
@@ -21,7 +19,6 @@ This is just a web app based on data from <a href="https://myanimelist.net/" tar
 - Light and dark theme
 
 ## Getting started
----
 ### Prerequisites
 - npm
 - nodejs
