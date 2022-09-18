@@ -109,7 +109,7 @@ function PosterPlaceholder({ error }) {
     );
 }
 
-export default function PosterCarousel({ name, fetchUrl }) {
+export default function PosterCarousel({ name, fetchUrl, loadCallBack }) {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -136,6 +136,7 @@ export default function PosterCarousel({ name, fetchUrl }) {
             })
             .finally(() => {
                 setLoading(false);
+                loadCallBack();
             });
     };
 

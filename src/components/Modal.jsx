@@ -56,8 +56,7 @@ function RatingCard({ name, rate, color }) {
     );
 }
 
-export default function Modal({ id }) {
-    //const { data } = animeItem;
+export default function Modal() {
 
     const { animeId, setAnimeId } = useContext(AppContext);
     const [animation, setAnimation] = useState(false);
@@ -151,9 +150,9 @@ export default function Modal({ id }) {
                                     {data.year} | {data.rating}
                                 </Text>
                                 <Box>
-                                    <Badge mr={1}>{data?.demographics[0]?.name}</Badge>
+                                    {data?.demographics[0]?.name && <Badge mr={2}>{data?.demographics[0]?.name}</Badge>}
                                     {data.genres.map((el, i) => (
-                                        <Badge bg="secondary" key={i} mr={1}>
+                                        <Badge bg="secondary" key={i} mr={2}>
                                             {el.name}
                                         </Badge>
                                     ))}
@@ -179,7 +178,7 @@ export default function Modal({ id }) {
                                 Rates
                             </Text>
                             <Flex
-                                sx={{ gap: 2, mb: 3, flexDirection: ['column', 'column', 'row'] }}
+                                sx={{ gap: 3, mb: 4, flexDirection: ['column', 'column', 'row'] }}
                             >
                                 <RatingCard name="score" rate={data.score + '/10'} color="green" />
                                 <RatingCard

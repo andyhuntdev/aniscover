@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, NavLink, Button, Box, Text, Link, Image } from 'theme-ui';
+import { Flex, NavLink, Button, Box, Text, Link } from 'theme-ui';
 import ColorSwitcher from './ColorSwitcher';
 import Searchbar from './Searchbar';
 
