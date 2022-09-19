@@ -1,6 +1,7 @@
 import { ThemeProvider } from 'theme-ui';
 import { theme } from './themes';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Modal from './components/Modal';
 import PosterCarousel from './components/PosterCarousel';
@@ -90,6 +91,7 @@ function App() {
                             fetchUrl="https://api.jikan.moe/v4/top/anime?type=ova&filter=favorite"
                         />
                     )}
+                    <Footer />
                 </Box>
             </ThemeProvider>
         </AppContext.Provider>
