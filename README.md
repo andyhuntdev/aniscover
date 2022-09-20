@@ -27,11 +27,15 @@ This is just a web app based on data from <a href="https://myanimelist.net/" tar
 ````
 git clone https://github.com/andyhuntdev/aniscover.git
 ````
-2. Install packages
+2. Go in folder
+````
+cd aniscover
+````
+3. Install packages
 `````
 npm i
 `````
-3. Runs the app in the development mode.
+4. Runs the app in the development mode.
 Open http://localhost:3000 to view it in your browser.
 `````
 npm run start
