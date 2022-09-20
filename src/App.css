@@ -30,3 +30,9 @@
 .swiper-button-next {
     right: 5px;
 }
+
+@media (max-width: 1199px) {
+    .swiper-pagination {
+        display: none;
+    }
+}
