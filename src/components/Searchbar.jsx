@@ -73,7 +73,7 @@ export default function Searchbar() {
                 autofillBackgroundColor="highlight"
                 placeholder="Search anime"
                 sx={{
-                    width: 400,
+                    width: ['100%', '100%', '400px'],
                     transition: 'border-color 0.2s ease',
                     borderWidth: '1px',
                     borderStyle: 'solid',
@@ -84,7 +84,7 @@ export default function Searchbar() {
             {searchValue.length > 2 && (
                 <>
                     <Close
-                        sx={{ position: 'absolute', right: '5px', top: '5px', cursor: 'pointer' }}
+                        sx={{ position: 'absolute', right: '5px', top: '5px', cursor: 'pointer', zIndex: 100 }}
                         onClick={() => setSearchValue('')}
                     />
                     <Box
