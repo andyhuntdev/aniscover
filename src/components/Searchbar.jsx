@@ -64,7 +64,7 @@ export default function Searchbar() {
     }, [searchValue]);
 
     return (
-        <Box sx={{ position: 'relative' }}>
+        <Box sx={{ position: 'relative', zIndex: 10 }}>
             <Input
                 value={searchValue}
                 onChange={(e) => {
@@ -84,7 +84,7 @@ export default function Searchbar() {
             {searchValue.length > 2 && (
                 <>
                     <Close
-                        sx={{ position: 'absolute', right: '5px', top: '5px', cursor: 'pointer', zIndex: 100 }}
+                        sx={{ position: 'absolute', right: '5px', top: '5px', cursor: 'pointer' }}
                         onClick={() => setSearchValue('')}
                     />
                     <Box
